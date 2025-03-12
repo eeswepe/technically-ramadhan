@@ -3,7 +3,7 @@ def increment_string(strng):
         return "1"
 
     if strng.isdigit():
-        return str(int(strng) + 1)
+        return str(int(strng) + 1).zfill(len(strng))
 
     marker = len(strng)
 
@@ -13,8 +13,6 @@ def increment_string(strng):
             break
 
     angka = strng[marker:]
-
-    # Jika tidak ada angka di akhir string, tambahkan "1"
     if angka == "":
         return strng + "1"
 
